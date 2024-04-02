@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - script
+  - water
+  - fire
+  - earth
+  - air
+  - barrier
   layers:
   - Default
   - TransparentFX

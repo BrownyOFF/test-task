@@ -9,6 +9,7 @@ public class stockPrint : MonoBehaviour
     public GameObject stockx2;
     public GameObject stocktimer;
     public GameObject balance;
+    public bool inShop;
     void Start()
     {
         Print();
@@ -16,7 +17,9 @@ public class stockPrint : MonoBehaviour
 
     public void Print()
     {
-        balance.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("balance").ToString();
+        if(inShop)
+            balance.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("balance").ToString();
+        
         stock60.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("stock60").ToString();
         stockx2.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("stockx2").ToString();
         stocktimer.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt("stocktimer").ToString();
